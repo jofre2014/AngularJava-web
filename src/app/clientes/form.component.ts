@@ -50,6 +50,7 @@ private titulo: string = 'Crear Cliente';
       res => {
         this.router.navigate(['/clientes']);
         swal('Cliente Actualizado', `${res.mensaje} : ${res.cliente.nombre}`, 'success');
+        
       }
     );
   }

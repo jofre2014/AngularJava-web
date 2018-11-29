@@ -61,6 +61,7 @@ private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
         console.error(e.error.mensaje);
         swal('Error al crear cliente', e.error.mensaje, 'error');
         return throwError(e);
+
       })
     );
   }
@@ -73,6 +74,7 @@ private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
         console.error(e.error.mensaje);
         swal('Error al crear editar', e.error.mensaje,'error');
         return throwError(e);
+        
       })
     );
   }
