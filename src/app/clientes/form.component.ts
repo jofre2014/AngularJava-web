@@ -35,11 +35,12 @@ private titulo: string = 'Crear Cliente';
     )
   }
 
+
   create(): void {
     this.clienteService.create(this.cliente).subscribe(
       response => {
         this.router.navigate(['/clientes']);
-        swal('Cliente Guardado', `Cliente ${response.nombre} guardado con éxito`, 'success' );
+        swal('Cliente Guardado', `El cliente : ${response.nombre} ha sido creado con éxito!`, 'success' );
       }
     );
   }
@@ -48,7 +49,7 @@ private titulo: string = 'Crear Cliente';
     this.clienteService.update(this.cliente).subscribe(
       res => {
         this.router.navigate(['/clientes']);
-        swal('Cliente Actualizado', `Cliente ${res.nombre} actualizado correctamente`, 'success');
+        swal('Cliente Actualizado', `${res.mensaje} : ${res.cliente.nombre}`, 'success');
       }
     );
   }
